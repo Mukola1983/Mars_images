@@ -1,23 +1,20 @@
-import logo from './logo.svg'
-import './App.css'
+import React, { useState, useEffect, useCallback } from 'react'
 
-function App() {
+export default function App() {
+  const [userInput, setUserInput] = useState('dfsdfsd')
+  const [value, setValue] = useState('')
+  const ochangeInput = (e) => {
+    e.preventDefault()
+    setValue(e.target.value)
+  }
+  const clickHandler = () => {
+    setUserInput(value)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Deploy-project</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>{userInput}</p>
+      <input type="text" onChange={ochangeInput} />
+      <button onClick={clickHandler}>click</button>
     </div>
   )
 }
-
-export default App
