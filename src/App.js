@@ -13,7 +13,7 @@ export default function App() {
   }
 
   const getApi = () => {
-    getPhoto('Curiosity', 1, 1)
+    getPhoto(value, 1, 1)
       .then((data) => {
         console.log(data.photos)
       })
