@@ -6,7 +6,7 @@ const API_KEY = '59CDafTnK5TeXMtpaRwlrBGoJJ0WoLciNEVfIe5z'
 
 export const getPhoto = (roverName, page, sol, camera) =>
   Utils.fetchJSON(
-    `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?sol=${sol}&page=${page}&${camera}&api_key=${API_KEY}`
+    `HTTPS://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?sol=${sol}&page=${page}&${camera}&api_key=${API_KEY}`
   )
 
 export const manifest = () =>

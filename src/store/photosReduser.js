@@ -6,7 +6,7 @@ const ADD_API = 'ADD_API'
 export const photosReduser = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_API:
-      return { ...state, photos: [...state.photos, ...action.payloud] }
+      return { ...state, photos: [...action.payloud] }
 
     default:
       return state
