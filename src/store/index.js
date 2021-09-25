@@ -1,11 +1,13 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { cashReduser } from './cashReduser'
-import { customerReduser } from './customerReduser'
+import thunk from 'redux-thunk'
+import { photosReduser } from './photosReduser'
 
 const rootRedusers = combineReducers({
-  cashReduser,
-  customerReduser,
+  photosReduser,
 })
 
-export const store = createStore(rootRedusers, composeWithDevTools())
+export const store = createStore(
+  rootRedusers,
+  composeWithDevTools(applyMiddleware(thunk))
+)
