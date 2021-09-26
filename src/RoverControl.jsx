@@ -18,19 +18,28 @@ export default function RoverControl() {
   };
   return (
     <FormControl>
-      <Typography variant="h5">Choose your Rover</Typography>
+      <Typography variant="h5" sx={{ color: "#00008B" }}>
+        Choose your Rover
+      </Typography>
       <RadioGroup value={rover} onChange={changeRoverName}>
         <FormControlLabel
           value="Curiosity"
           control={<Radio />}
           label="Curiosity"
+          sx={{ color: "#00008B" }}
         />
         <FormControlLabel
           value="Opportunity"
           control={<Radio />}
           label="Opportunity"
+          sx={{ color: "#00008B" }}
         />
-        <FormControlLabel value="Spirit" control={<Radio />} label="Spirit" />
+        <FormControlLabel
+          value="Spirit"
+          control={<Radio />}
+          label="Spirit"
+          sx={{ color: "#00008B" }}
+        />
       </RadioGroup>
     </FormControl>
   );

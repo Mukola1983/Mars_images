@@ -35,8 +35,6 @@ export default function SolControl() {
     }
   }, [rover]);
 
-  console.log("deploy");
-
   return (
     <Stack spacing={2}>
       <Typography variant="h6">Sol: {}</Typography>

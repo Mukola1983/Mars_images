@@ -1,10 +1,12 @@
 .image {
   max-width: 300px;
   position: absolute;
-  transform: translate(1500px, 0);
+  transform: translate(300px, -1000px);
   transition: 0.6s;
+  opacity: 0;
 }
 
 .image.active {
-  transform: translate(300px, 0);
+  transform: translate(300px, 0px);
+  opacity: 1;
 }

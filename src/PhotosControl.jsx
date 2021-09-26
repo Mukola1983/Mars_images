@@ -21,7 +21,7 @@ export default function PhotosControl() {
       {photos.length > 0 ? (
         <div className={styles.box}>
           {photos.map((photo) => (
-            <div key={photo.id}>
+            <div key={photo.id} className={styles.box}>
               <img src={photo.img_src} alt="" className={styles.image} />
             </div>
           ))}

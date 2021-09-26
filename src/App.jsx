@@ -9,13 +9,18 @@ import RoverImages from "./RoverImages";
 export default function App() {
   return (
     <div>
-      <div className={styles.navbar}>
-        <RoverControl />
-        <RoverImages />
+      <div className={styles.header}>
+        <h1>Explore Mars with photos from NASA </h1>
+        <div className={styles.navbar}>
+          <RoverControl />
+          <RoverImages />
+        </div>
       </div>
-      <SolControl />
-      <PageControl />
-      <PhotosControl />
+      <div className={styles.container}>
+        <SolControl />
+        <PageControl />
+        <PhotosControl />
+      </div>
     </div>
   );
 }

@@ -7,4 +7,12 @@
 
 .image {
   max-width: 250px;
+  transform: scale(1, 1);
+  transition: 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.8, 1.8);
+  z-index: 10;
+  cursor: pointer;
 }
