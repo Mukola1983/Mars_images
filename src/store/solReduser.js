@@ -2,12 +2,12 @@ const defaultState = {
   maxSol: 3213,
   curentSol: 1,
 }
-const CHANGE_SOL = 'CHANGE_SOL'
+const CHANGE_MAX_SOL = 'CHANGE_MAX_SOL'
 const CURENT_SOL = 'CURENT_SOL'
 
 export const solReduser = (state = defaultState, action) => {
   switch (action.type) {
-    case CHANGE_SOL:
+    case CHANGE_MAX_SOL:
       return { ...state, maxSol: action.payloud }
     case CURENT_SOL:
       return { ...state, curentSol: action.payloud }
@@ -16,5 +16,5 @@ export const solReduser = (state = defaultState, action) => {
   }
 }
 
-export const changeSol = (payloud) => ({ type: CHANGE_SOL, payloud })
+export const changeMaxSol = (payloud) => ({ type: CHANGE_MAX_SOL, payloud })
 export const changeCurentSol = (payloud) => ({ type: CURENT_SOL, payloud })

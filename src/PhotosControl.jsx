@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addApi } from "./store/photosReduser";
 import { getPhoto } from "./API/rovers";
@@ -11,16 +11,13 @@ export default function PhotosControl() {
   const curentSol = useSelector((state) => state.solReduser.curentSol);
   const curentPage = useSelector((state) => state.pageReduser.curentPage);
 
-  const clickHandle = () => {
+  useEffect(() => {
     getPhoto(rover, curentPage, curentSol).then((data) => {
       dispatch(addApi(data.photos));
     });
-  };
+  }, [rover, curentPage, curentSol]);
   return (
     <div>
-      <button type="submit" onClick={clickHandle}>
-        Show photos
-      </button>
       {photos.length > 0 ? (
         <div className={styles.box}>
           {photos.map((photo) => (

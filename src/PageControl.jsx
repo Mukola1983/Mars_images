@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Button } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { incrementPage, decrementPage } from "./store/pageReduser";
+import styles from "./PageControl.module.css";
 
 export default function PageControl() {
   const dispatch = useDispatch();
@@ -17,12 +21,25 @@ export default function PageControl() {
   return (
     <div>
       <h3>page: {curentPage}</h3>
-      <button type="submit" onClick={nextPage}>
-        next page
-      </button>
-      <button type="submit" onClick={prevPage}>
-        prev page
-      </button>
+      <div className={styles.buttonBox}>
+        <Button
+          variant="contained"
+          size="small"
+          type="submit"
+          onClick={prevPage}
+        >
+          <ArrowBackIosNewIcon />
+        </Button>
+        <Button
+          sx={{ m: 2 }}
+          variant="contained"
+          size="small"
+          type="submit"
+          onClick={nextPage}
+        >
+          <ArrowForwardIosIcon />
+        </Button>
+      </div>
     </div>
   );
 }
