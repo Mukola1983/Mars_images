@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: start;
+
   position: relative;
   padding: 50px;
 }
@@ -11,10 +11,10 @@
 }
 
 .header {
-  background: url('https://media.istockphoto.com/photos/march-picture-id137450592?k=20&m=137450592&s=612x612&w=0&h=enEgPTk0-bRsCzjHlWFYWp7BZQgB30SfDKir_z5OQyU=')
+  background: url('https://mars.nasa.gov/imgs/mars2020/mars2020-sky-crane.jpg')
     center no-repeat fixed;
   background-size: 100% auto;
-  min-height: 300px;
+  min-height: 400px;
 }
 
 .header h1 {
