@@ -1,10 +1,12 @@
 import React from "react";
+import { ButtonProps, Button } from "react-bootstrap";
 import RoverControl from "./RoverControl";
 import SolControl from "./SolControl";
 import PageControl from "./PageControl";
 import PhotosControl from "./PhotosControl";
 import styles from "./App.module.css";
 import RoverImages from "./RoverImages";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
         <PageControl />
         <PhotosControl />
       </div>
+      <Button variant="warning">bootstarap</Button>
     </div>
   );
 }
