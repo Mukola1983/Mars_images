@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Grid, Col, Container, Carousel } from "react-bootstrap";
+import { Grid, Col, Container, Carousel, Image } from "react-bootstrap";
 import { addApi } from "./store/photosReduser";
 import { getPhoto } from "./API/rovers";
 import styles from "./PhotosControl.module.css";
@@ -27,10 +27,18 @@ export default function PhotosControl() {
               <img src={photo.img_src} alt="" className={styles.image} />
             </Col>
           ))} */}
+
           <Carousel>
             {photos.map((photo) => (
-              <Carousel.Item key={photo.id}>
-                <img className="d-block w-100" src={photo.img_src} alt="Mars" />
+              <Carousel.Item key={photo.id} className={styles.box}>
+                <div className={styles.image}>
+                  <Image
+                    className="d-block w-100 img-thumbnail"
+                    src={photo.img_src}
+                    alt="Mars"
+                    fluid
+                  />
+                </div>
               </Carousel.Item>
             ))}
           </Carousel>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Image } from "react-bootstrap";
 import styles from "./RoverImages.module.css";
 import Utils from "./API/Utils";
 
@@ -10,21 +11,21 @@ export default function RoverImages() {
 
   return (
     <>
-      <img
+      <Image
         src={Utils.curiosity}
         alt=""
         className={
           curiosity ? `${styles.image} ${styles.active}` : `${styles.image} `
         }
       />
-      <img
+      <Image
         src={Utils.spirit}
         alt=""
         className={
           spirit ? `${styles.image} ${styles.active}` : `${styles.image} `
         }
       />
-      <img
+      <Image
         src={Utils.opportynity}
         alt=""
         className={

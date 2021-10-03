@@ -1,12 +1,15 @@
 .box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* margin: 20px 0 0 0; */
 }
 
 .image {
-  max-width: 250px;
+  margin: 0 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rgb(195, 29, 29);
+}
+
+/* .image {
+  max-width: 750px;
   transform: scale(1, 1);
   transition: 0.3s;
 }
@@ -15,4 +18,4 @@
   transform: scale(1.8, 1.8);
   z-index: 10;
   cursor: pointer;
-}
+} */
