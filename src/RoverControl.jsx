@@ -8,6 +8,8 @@ import {
   FormControlLabel
 } from "@mui/material";
 import { changeRover } from "./store/roverReduser";
+import { updatePage } from "./store/pageReduser";
+import { changeCurentSol } from "./store/solReduser";
 
 export default function RoverControl() {
   const dispatch = useDispatch();
@@ -15,6 +17,8 @@ export default function RoverControl() {
 
   const changeRoverName = (e) => {
     dispatch(changeRover(e.target.value));
+    dispatch(updatePage());
+    dispatch(changeCurentSol(1));
   };
   return (
     <FormControl>

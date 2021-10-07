@@ -6,6 +6,8 @@ import { roverReduser } from './roverReduser'
 import { solReduser } from './solReduser'
 import { pageReduser } from './pageReduser'
 
+const youTakeMe = 'you take me'
+
 const rootRedusers = combineReducers({
   roverReduser,
   photosReduser,

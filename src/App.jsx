@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Navbar, Row } from "react-bootstrap";
+import { Col, Container, Navbar, Row } from "react-bootstrap";
 import RoverControl from "./RoverControl";
 import SolControl from "./SolControl";
 import PageControl from "./PageControl";
@@ -11,22 +11,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function App() {
   return (
     <div>
-      <Container className={styles.header} fluid>
-        {/* <h1>Explore Mars with photos from NASA </h1> */}
-        <Navbar.Brand href="#home">
-          Explore Mars with photos <br /> from NASA
-        </Navbar.Brand>
-        <Row className={styles.navbar}>
-          <RoverControl />
-          <RoverImages />
-        </Row>
-      </Container>
+      <Row className={styles.headerBox}>
+        <Col lg={8}>
+          <Col p={1}>
+            <h3>
+              Explore Mars with photos <br /> from NASA
+            </h3>
+            <RoverControl className={styles.rc} />
+            <RoverImages />
+          </Col>
+        </Col>
+        <Col lg={4}>
+          <SolControl />
+          <PageControl />
+        </Col>
+      </Row>
+
       <Container className={styles.container}>
-        <SolControl />
-        <PageControl />
         <PhotosControl />
       </Container>
-      <Button variant="warning">bootstarap</Button>
+      <div className={styles.footer}>
+        <h2>Thanks for your curiosity !</h2>
+      </div>
     </div>
   );
 }

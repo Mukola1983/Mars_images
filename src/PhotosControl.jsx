@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Grid, Col, Container, Carousel, Image } from "react-bootstrap";
+import { Container, Carousel, Image } from "react-bootstrap";
 import { addApi } from "./store/photosReduser";
 import { getPhoto } from "./API/rovers";
 import styles from "./PhotosControl.module.css";
